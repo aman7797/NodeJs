@@ -6,22 +6,12 @@ For example, there are  `n=7` socks with colors `ar=[1,2,1,2,1,3,2]`. There is o
 
 ## Functional Description
 
-Complete the sockMerchant function in the editor below. It must return an integer representing the number of matching pairs of socks that are available.
+It must return an integer representing the number of matching pairs of socks that are available.
 
-sockMerchant has the following parameter(s):
+SockMerchant has the following parameter(s):
 
 * n: the number of socks in the pile
 * ar: the colors of each sock
-
-## Input Format
-
-The first line contains an integer `n`, the number of socks represented in `ar` . 
-The second line contains `n` space-separated integers describing the colors  `ar[i]` of the socks in the pile.
-
-## Constaints
-
-  > $$ 1 <n < 100$$
-  > $$1<ar[i]<100  where 0<i<<n$$
 
 ## Output Format 
 
