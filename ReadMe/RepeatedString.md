@@ -48,3 +48,21 @@ The first $n=10$ letters of the infinite string are abaabaabaa. Because there ar
 
 ## Explanation
 Because all of the first $n=1000000000000$ letters of the infinite string are a, we print 1000000000000 on a new line.
+
+## What I have Tried !!!
+```js
+function repeatedString(s, n) {
+    let num = parseInt(n / s.length)
+    let rem = n % s.length;
+    let aCount = 0;
+    for (let i = 0; i < s.length; i++) {
+        if (s.charAt(i) == 'a') {
+            aCount += num;
+            if (i < rem)
+                aCount++;
+        }
+    }
+    return aCount
+
+}
+```
