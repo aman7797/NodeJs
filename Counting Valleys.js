@@ -26,29 +26,23 @@ function readLine() {
 
 // Complete the countingValleys function below.
 function countingValleys(n, s) {
-    let countU=0,countD=0,level=0
-    for (let i = 0; i < n; i++){
+    let level = 0, highlevel = 0, valley=0
+    for(let i = 0; i < n; i++) {
         var c = s.charAt(i);
-        // console.log("c" + c)
-        if (c == 'U') {
-            countU++ 
+        if (c == 'U')
+        {
+            level = level + 1
+            console.log("In U case \t" + level)
         }
         else {
-            countD++   
+            level = level - 1
+            console.log("In D case \t" + level)
+            if (level == -1) {
+                valley++
+            }
         }
     }
-    console.log("countU" + countU)
-    console.log("countD" + countD)
-    if (countU > 4 || countD > 4) {
-        level = countU - countD
-        level=level+2
-    }
-    else {
-        level = countU - countD
-        level = level + 1
-    }
-    console.log("Answer" + level)
-    return level
+    return valley
 }
 
 function main() {

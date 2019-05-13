@@ -44,3 +44,26 @@ If we represent _ as sea level, a step up as /, and a step down as \, Gary's hik
     _/\      _
        \    /
         \/\/
+    
+## What I have tried !!!
+```js
+function countingValleys(n, s) {
+    let level = 0, highlevel = 0, valley=0
+    for(let i = 0; i < n; i++) {
+        var c = s.charAt(i);
+        if (c == 'U')
+        {
+            level = level + 1
+            console.log("In U case \t" + level)
+        }
+        else {
+            level = level - 1
+            console.log("In D case \t" + level)
+            if (level == -1) {
+                valley++
+            }
+        }
+    }
+    return valley
+}
+```
