@@ -28,5 +28,22 @@ Print the minimum number of jumps needed to win the game.
 ## Explanation :
 Emma must avoid c[2] and c[5]. She can win the game with a minimum of 4 jumps:
 
+![Explanation](img/Screenshot&#32;2019-05-13&#32;at&#32;12.19.02&#32;PM.png)
 
-
+## What I Tried !!!
+```js
+function jumpingOnClouds(c) {
+    let count = 0, i = 0
+    while (i < c.length - 1) {
+        if (i + 2 < c.length && c[i + 2] == 0) {
+            i = i + 2
+            count++
+        }
+        else {
+            i++
+            count++
+        }
+    }
+    return count
+}
+```
