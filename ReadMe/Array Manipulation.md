@@ -9,10 +9,10 @@ For example, the length of your array of zeros $n=10$. Your list of queries is a
 Add the values of $k$ between the indices $a$ and $b$ inclusive:
 
     index->	 1 2 3  4  5 6 7 8 9 10
-        [0,0,0, 0, 0,0,0,0,0, 0]
-        [3,3,3, 3, 3,0,0,0,0, 0]
-        [3,3,3,10,10,7,7,7,0, 0]
-        [3,3,3,10,10,8,8,8,1, 0]
+            [0,0,0, 0, 0,0,0,0,0, 0]
+            [3,3,3, 3, 3,0,0,0,0, 0]
+            [3,3,3,10,10,7,7,7,0, 0]
+            [3,3,3,10,10,8,8,8,1, 0]
 The largest value is $10$ after all operations are performed.
 
 ## Function Description
@@ -54,3 +54,22 @@ After the third update list will be 100 200 200 200 100.
 The required answer will be $200$.
 
 ## What I have Tried!!!
+```js
+function arrayManipulation(n, queries) {
+    let array = []
+    let max = 0, command = 0
+    while (n--) array[n] = 0;
+    for (let i = 0; i < queries.length; i++) {
+        command = queries[i]
+        for (let j = command[0] - 1; j < command[1]; j++) {
+            array[j] += command[2]
+            if (max < array[j]) {
+                array[j]
+                max = array[j]
+            }
+        } 
+        console.log("the array is ->" + array)
+    }
+    return max
+}
+```
